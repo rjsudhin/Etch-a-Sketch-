@@ -1,32 +1,43 @@
+const message = document.querySelector('#message')
 addEventListener('load', function() {
-   // create a container with child div
-   createContainer(16)
+   // create board
+   createBoard(16) 
+   const btn_popup = document.querySelector('#popup')
+   btn_popup.addEventListener('click', function() {
+     let size = getSize()
+     createBoard(size)
+   })
+
 })
 
-function createContainer(size) {
-   let container = document.querySelector('#container')
-   console.log(container)
-   container.style.gridTemplateColumns = `repeat(${size}, 1fr)`
-   container.style.gridTemplateRows = `repeat(${size}, 1fr)`
 
-   // amount of full container child divs
+function createBoard(size) {
+   const board = document.querySelector('#board')
+   board.style.gridTemplateColumns = `repeat(${size}, 1fr)`
+   board.style.gridTemplateRows = `repeat(${size}, 1fr)`
+
    let amount = size * size
 
    for (let i = 0; i < amount; i += 1) {
       let div = document.createElement('div')
-      container.insertAdjacentElement('beforeend', div)
-      drawing(div)
-      
-      function drawing(elem) {
-         elem.addEventListener('mouseover', function() {
-            elem.style.backgroundColor = 'black'
-         })
-      }
+      div.style.backgroundColor = 'yellow'
+      board.appendChild(div)
+   }
+}
 
+function getSize() {
+   let input = prompt('Enter the size')
+   if (input == '') {
+      message.textContent = 'Provide a number'
+   } else if (input < 0 || input > 100) {
+      message.textContent = 'Provide a number between 1 and 100'
+   } else {
+      message.textContent = 'you are ready to play'
    }
 
-
-
+   return input
 }
+
+
 
 

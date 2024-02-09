@@ -27,9 +27,9 @@ h3 {
    align-items: center;
 }
 #board {
-   width: 400px;
-   height: 400px;
-   background-color: #2525;
+   width: 350px;
+   height: 350px;
+   background-color: #22552255;
    display: grid;
    cursor: pointer;
 }

@@ -44,16 +44,32 @@ button {
    background-color: rgb(99, 143, 33);
 }
 
+#popup:active {
+   background-color: rgba(99, 143, 33, 0.459);
+}
+
 #black {
    background-color: #131212;
+}
+
+#black:active {
+   background-color: #13121241;
 }
 
 #random {
    background-color: rgba(31, 72, 185, 0.733);
 }
 
+#random:active {
+   background-color: rgba(31, 72, 185, 0.288);
+}
+
 #reset {
    background-color: rgb(235, 75, 75);
+}
+
+#reset:active {
+   background-color: rgba(235, 75, 75, 0.308);
 }
 #board {
    width: 350px;

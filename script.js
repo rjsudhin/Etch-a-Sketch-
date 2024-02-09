@@ -1,7 +1,21 @@
 let color = 'black'
+let click = false
 addEventListener('load', function() {
    // create container board
    createBoard(16)
+
+   // the mouse clicks only the container then starting the drawing
+   document.body.addEventListener('click', function (event) {
+      if (event.target.tagName != 'BUTTON') {
+         click = !click
+         let output = document.querySelector('#output')
+         if (click) {
+            output.textContent = 'you are ready to draw'
+         } else {
+            output.textContent = 'click and draw'
+         }
+      }
+   })
 
    // get the size of block
    const btn_popup = document.querySelector('#popup')
@@ -65,10 +79,12 @@ function getSize() {
 
 
 function divColor(e) {
-   if (color == 'random') {
-      e.target.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`
-   } else {
-      e.target.style.backgroundColor = 'black'
+   if (click) {
+      if (color == 'random') {
+         e.target.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`
+      } else {
+         e.target.style.backgroundColor = 'black'
+      }
 
    }
 }

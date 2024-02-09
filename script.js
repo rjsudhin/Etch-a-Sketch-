@@ -1,5 +1,6 @@
 let color = 'black'
 let click = false
+let message = document.querySelector('#message')
 addEventListener('load', function() {
    // create container board
    createBoard(16)
@@ -64,7 +65,6 @@ function createBoard(size) {
 }
 
 function getSize() {
-   let message = document.querySelector('#message')
    let input = prompt('Provide a number to size')
    if (input == '') {
       message.textContent = 'Provide a size'
@@ -79,6 +79,9 @@ function getSize() {
 
 
 function divColor(e) {
+   if (message.textContent =! '') {
+      message.textContent = ''
+   }
    if (click) {
       if (color == 'random') {
          e.target.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`

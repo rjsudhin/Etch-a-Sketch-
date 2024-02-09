@@ -1,4 +1,4 @@
-# Etch-a-Sketch-
+# Etch-a-Sketch
 Etch-a-Sketch project using JavaScript involves creating a drawing board where users can sketch by moving the mouse cursor. Below is a simple example with basic HTML, CSS, and JavaScript. 
 
 Live preview 👉 https://rjsudhin.github.io/Etch-a-Sketch-/

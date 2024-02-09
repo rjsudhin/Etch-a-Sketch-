@@ -40,12 +40,20 @@ button {
    color: #fff;
 }
 
+#popup {
+   background-color: rgb(99, 143, 33);
+}
+
 #black {
    background-color: #131212;
 }
 
 #random {
    background-color: rgba(31, 72, 185, 0.733);
+}
+
+#reset {
+   background-color: rgb(235, 75, 75);
 }
 #board {
    width: 350px;

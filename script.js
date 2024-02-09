@@ -6,7 +6,7 @@ addEventListener('load', function() {
    createBoard(16)
 
    // the mouse clicks only the container then starting the drawing
-   document.body.addEventListener('click', function (event) {
+   document.querySelector('#board').addEventListener('click', function (event) {
       if (event.target.tagName != 'BUTTON') {
          click = !click
          let output = document.querySelector('#output')
